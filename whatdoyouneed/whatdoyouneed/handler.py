@@ -7,21 +7,22 @@ def handle(req):
     Args:
         req (str): request body
     """
+    gateway_hostname = os.getenv("gateway_hostname", "gateway") 
     if(req == "something to do"):
-        r = requests.get("http://104.198.135.99:8080/function/iambored") 
+        r = requests.get("http://gateway.openfaas:8080/function/iambored") 
         return r.text
     if(req == "advise about life"):
-        r = requests.get("http://104.198.135.99:8080/function/advise") 
+        r = requests.get("http://gateway.openfaas:8080/function/advise") 
         return r.text
     if(req == "cat facts"):
-        r = requests.get("http://104.198.135.99:8080/function/cats") 
+        r = requests.get("http://gateway.openfaas:8080/function/cats") 
         return r.text
     if(req == "a tesla"):
-        r = requests.get("http://104.198.135.99:8080/function/dodecoin") 
+        r = requests.get("http://gateway.openfaas:8080/function/dodecoin") 
         return r.text
     if(req == ""):
         return "Tell what you need :) I am your virtual butler"
     
     
-    return req
+    return "Error"
   
