@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://104.198.135.99:8080
+functions:
+  iambored:
+    lang: python3
+    handler: ./iambored
+    image: 092017/iambored:latest
+

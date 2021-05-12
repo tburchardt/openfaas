@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://104.198.135.99:8080
+functions:
+  cats:
+    lang: python3
+    handler: ./cats
+    image: 092017/cats:latest
+

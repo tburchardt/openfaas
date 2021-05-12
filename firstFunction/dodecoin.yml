@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://104.198.135.99:8080
+functions:
+  dodecoin:
+    lang: python3
+    handler: ./dodecoin
+    image: 092017/dodecoin:latest
+
